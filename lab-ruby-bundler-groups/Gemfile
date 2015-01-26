@@ -1,0 +1,9 @@
+source 'https://rubygems.org'
+
+group 'workspace' do
+  gem 'nokogiri'
+end
+
+group 'playground' do
+  gem 'mechanize'
+end
