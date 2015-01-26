@@ -39,3 +39,11 @@ gem 'spring',        group: :development
 group :workshop_app do
   gem 'workshop', path: 'components/workshop'
 end
+
+group 'workspace' do
+  gem 'nokogiri'
+end
+
+group 'playground' do
+  gem 'redcarpet'
+end

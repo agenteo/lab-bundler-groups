@@ -1,4 +1,5 @@
 require 'bundler'
+require 'bundler/setup'
 
 Bundler.require(ENV['APP_RUNNING_MODE'] || :default)
 
