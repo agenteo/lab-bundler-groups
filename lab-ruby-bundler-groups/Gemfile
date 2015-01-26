@@ -5,5 +5,5 @@ group 'workspace' do
 end
 
 group 'playground' do
-  gem 'mechanize'
+  gem 'redcarpet'
 end
