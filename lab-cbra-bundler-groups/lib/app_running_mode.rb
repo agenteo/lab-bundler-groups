@@ -3,7 +3,6 @@ class AppRunningMode
   class << self
 
     def value
-      puts ENV['APP_RUNNING_MODE']
       case ENV['APP_RUNNING_MODE']
       when 'workshop'
         return :workshop
