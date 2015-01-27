@@ -1,5 +1,4 @@
 require File.expand_path('../boot', __FILE__)
-require File.expand_path('../../lib/app_running_mode', __FILE__)
 
 # Pick the frameworks you want:
 require "active_model/railtie"
@@ -10,11 +9,9 @@ require "action_view/railtie"
 require "sprockets/railtie"
 require "rails/test_unit/railtie"
 
-puts AppRunningMode.bundler_groups
-
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
-Bundler.require(*Rails.groups + AppRunningMode.bundler_groups)
+Bundler.require(*Rails.groups)
 
 module LabCbraBundlerGroups
   class Application < Rails::Application
