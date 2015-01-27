@@ -1,7 +1,7 @@
 class DetonateController < ApplicationController
 
-  def workspace
-    render text: Workspace::Engine.class
+  def workshop
+    render text: Workshop::Engine.class
   end
 
   def playground
