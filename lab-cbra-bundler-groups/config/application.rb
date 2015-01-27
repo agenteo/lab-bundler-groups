@@ -11,7 +11,16 @@ require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
-Bundler.require(*Rails.groups)
+Bundler.setup(*Rails.groups)
+
+if AppRunningMode.value == :playground
+  require 'playground'
+elsif AppRunningMode.value == :workshop
+  require 'workshop'
+else
+  require 'playground'
+  require 'workshop'
+end
 
 module LabCbraBundlerGroups
   class Application < Rails::Application
